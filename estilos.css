@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    background-color: blue;
+    color: burlywood;
+
+}
+/*​Puedo usar flexbox? => https://caniuse.com/#search=flexbox*/
+.contenedor{
+    background-color: black;
+    display: flex;
+    justify-content: center ;/*space-between; */
+   /* justify-content: space-evenly;/* divide los espacios entre las cajas de mejor forma */
+   align-items: center;
+   height: 600px;
+
+}
+
+.box{
+    font-size: 40px;
+    width: 200px;
+    height: 200px;
+    border: 10px solid white;
+    padding: 5px;
+    /*margin: 5px;*/
+  /*  display: inline-block;
+    margin-right: -4px;*/
+
+}
+
+
+
+
+
+/*
+.box:nth-child(2n){
+    background-color: yellow;
+    margin: 0 auto;
+    float: unset;
+}
+
+.box:nth-child(3n){
+    background-color: brown;
+    float: right;
+}*/
