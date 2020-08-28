@@ -13,26 +13,67 @@ body{
 .contenedor{
     background-color: black;
     display: flex;
-    justify-content: center ;/*space-between; */
-   /* justify-content: space-evenly;/* divide los espacios entre las cajas de mejor forma */
-   align-items: center;
-   height: 600px;
+    /*flex-direction: column; /*El eje principal ahora es el eje vertical.*/
+   /* justify-content: center;  /*  Todo el espacio sobrante lo ubica a los extremos. */
+    align-items: center; /*Propiedad para alinear verticalmente los elementos*/
+
+    flex-wrap: wrap; /*Permite que las cajas se amontonen si hay espacio. */
+    
+
+    /* Para alinear los elemento en el contenedor principal usamos justify-content.;*/
+   justify-content: space-between;    /* Pega los elementos externos a los extremos. */
+   /* justify-content: space-evenly;   /* Divide los espacios entre las cajas de la mejor forma para cada elemento. */
+   /*justify-content: space-around;  /*Agrega un espacio a los bordes de cada elemento. Le da el mismo margen a cada elemento. */
+    /*align-content: center; /*Se aplica cuando ya tienes varios elementos y ya se alienean a partir de la segunda linea*/
+    /* flex-flow: column wrap ; /*Es el resumen de flex-direccion y flex-wrap;*/
+    height: 900px; /*Le damos un alto para que se alinien verticalmente.*/
+
 
 }
+/*Hacer una alineacion en el eje vertical en el eje secundario.*/
 
 .box{
     font-size: 40px;
-    width: 200px;
+   /* width: 200px;*/
     height: 200px;
     border: 10px solid white;
     padding: 5px;
     /*margin: 5px;*/
   /*  display: inline-block;
     margin-right: -4px;*/
+    flex: 1 1 200px; /*flex es el resumen de grow shink basis*/
+
 
 }
 
+.box:nth-child(1){
+    /*align-self: flex-end;*/
+    /*order: -1; /*Sirve para ordenar los elementos*/
+    /*flex*/
+/*     flex-grow: 1 ; /*El elemento va a tener la capasidad de estirarse.*/
+    /*flex-shrink: ; /*El elemento va a tener la capasidad de encogerse.*/
+   /* flex-basis: 200px ; /*Da un ancho por defecto.*/
+   /*  flex: 2 8 200px; /*flex es el resumen de grow shink basis*/
+}
+.box:nth-child(2){
+   /* flex-shrink: 5 ;
 
+   /* flex-grow: 2 ; /*El elemento va a tener la capasidad de estirarse.*/
+}
+.box:nth-child(3){
+    /*flex-grow: 3 ; /*El elemento va a tener la capasidad de estirarse.*/
+}
+.box:nth-child(4){
+  /*  flex-basis: 400px ; /*Da un ancho por defecto.*/
+
+    /*flex-grow: 4 ; /*El elemento va a tener la capasidad de estirarse.*/
+}
+
+/*.final{
+    align-self: flex-start;
+    background-color: yellow;
+    
+}*/
 
 
 
@@ -47,3 +88,6 @@ body{
     background-color: brown;
     float: right;
 }*/
+
+/*Para ver todas las opciones de Flexbox*/
+/* https://www.codinglt.dev/flexbox/*/
